@@ -24,6 +24,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 urlpatterns = [
     path('', include(router.urls)),
     path('register/merchant', register_merchant),
+    path('register/consumer', register_consumer),
     path('login/', login_user),
     path('api-token-auth/', obtain_auth_token),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),

@@ -43,8 +43,6 @@ def register_merchant(request):
       request -- The full HTTP request object
     '''
 
-    print('A merchant is registering.')
-
     req_body = json.loads(request.body.decode())
 
     new_user = User.objects.create_user(
@@ -67,5 +65,36 @@ def register_merchant(request):
 
     token = Token.objects.create(user=new_user)
 
-    data = json.dumps({"token": token.key})
+    data = json.dumps({"token": token.key, "is_merchant": True})
+    return HttpResponse(data, content_type='application/json')
+
+@csrf_exempt
+def register_consumer(request):
+    '''Handles the creation of a new user for authentication
+
+    Method arguments:
+      request -- The full HTTP request object
+    '''
+
+    req_body = json.loads(request.body.decode())
+
+    new_user = User.objects.create_user(
+        username=req_body['username'],
+        email=req_body['email'],
+        password=req_body['password'],
+        first_name=req_body['first_name'],
+        last_name=req_body['last_name']
+    )
+
+    consumer = Consumer.objects.create(
+        image=req_body['image'],
+        phone_number=req_body['phone_number'],
+        user=new_user
+    )
+
+    consumer.save()
+
+    token = Token.objects.create(user=new_user)
+
+    data = json.dumps({"token": token.key, "is_consumer": True})
     return HttpResponse(data, content_type='application/json')
