@@ -29,3 +29,46 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+node_modules
+bower_components
+__pycache__
+*.pyc
+bin
+obj
+*.db
+*.sqlite3
+.vscode
+dist
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django stuff:
+*.log
+local_settings.py
+
+# pyenv
+.python-version
+
+# dotenv
+.env
+
+# virtualenv
+.vscode
+
+.DS_Store
+*.sqlite3
+media/
+*.pyc
+*.db
+*.pid
+
+# django migrations
+migrations
+virtumarket.session.sql
