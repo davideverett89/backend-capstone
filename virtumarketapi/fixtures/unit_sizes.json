@@ -1,0 +1,79 @@
+[
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 1,
+        "fields": {
+            "name": "Each"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 2,
+        "fields": {
+            "name": "Pound"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 3,
+        "fields": {
+            "name": "Gallon"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 4,
+        "fields": {
+            "name": "Dozen"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 5,
+        "fields": {
+            "name": "Gram"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 6,
+        "fields": {
+            "name": "Liter"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 7,
+        "fields": {
+            "name": "Ounce"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 8,
+        "fields": {
+            "name": "Bushel"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 9,
+        "fields": {
+            "name": "Can"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 10,
+        "fields": {
+            "name": "Cup"
+        }
+    },
+    {
+        "model": "virtumarketapi.unitsize",
+        "pk": 11,
+        "fields": {
+            "name": "Pack"
+        }
+    }
+]
