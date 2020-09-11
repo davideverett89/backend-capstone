@@ -1,0 +1,10 @@
+[
+    {
+        "model": "virtumarketapi.market",
+        "pk": 1,
+        "fields": {
+            "name": "Nashville Farmer's Market",
+            "zipcode": 37208
+        }
+    }
+]
