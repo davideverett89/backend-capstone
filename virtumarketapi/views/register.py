@@ -27,8 +27,13 @@ def login_user(request):
 
         if authenticated_user is not None:
             token = Token.objects.get(user=authenticated_user)
-            data = json.dumps({"valid": True, "token": token.key})
-            return HttpResponse(data, content_type='application/json')
+            
+            if Merchant.objects.filter(user=authenticated_user).exists():
+                data = json.dumps({"valid": True, "token": token.key, "user_role": "merchant"})
+                return HttpResponse(data, content_type='application/json')
+            if Consumer.objects.filter(user=authenticated_user).exists():
+                data = json.dumps({"valid": True, "token": token.key, "user_role": "consumer"})
+                return HttpResponse(data, content_type='application/json')
 
         else:
             data = json.dumps({"valid": False})
@@ -65,7 +70,7 @@ def register_merchant(request):
 
     token = Token.objects.create(user=new_user)
 
-    data = json.dumps({"token": token.key, "is_merchant": True})
+    data = json.dumps({"token": token.key, "user_role": "merchant"})
     return HttpResponse(data, content_type='application/json')
 
 @csrf_exempt
@@ -96,5 +101,5 @@ def register_consumer(request):
 
     token = Token.objects.create(user=new_user)
 
-    data = json.dumps({"token": token.key, "is_consumer": True})
+    data = json.dumps({"token": token.key, "user_role": "consumer"})
     return HttpResponse(data, content_type='application/json')
