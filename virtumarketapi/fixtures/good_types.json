@@ -1,0 +1,37 @@
+[
+    {
+        "model": "virtumarketapi.goodtype",
+        "pk": 1,
+        "fields": {
+            "name": "Meat"
+        }
+    },
+    {
+        "model": "virtumarketapi.goodtype",
+        "pk": 2,
+        "fields": {
+            "name": "Produce"
+        }
+    },
+    {
+        "model": "virtumarketapi.goodtype",
+        "pk": 3,
+        "fields": {
+            "name": "Dairy"
+        }
+    },
+    {
+        "model": "virtumarketapi.goodtype",
+        "pk": 4,
+        "fields": {
+            "name": "Baked Goods"
+        }
+    },
+    {
+        "model": "virtumarketapi.goodtype",
+        "pk": 5,
+        "fields": {
+            "name": "Farm Direct"
+        }
+    }
+]

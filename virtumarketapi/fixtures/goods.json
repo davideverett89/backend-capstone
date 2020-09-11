@@ -1,0 +1,145 @@
+[
+    {
+        "model": "virtumarketapi.good",
+        "pk": 1,
+        "fields": {
+            "name": "Apple",
+            "price": 5.00,
+            "description": "A delicious apple from the finest farm in middle TN.",
+            "quantity": 5,
+            "good_type_id": 2,
+            "merchant_id": 1,
+            "unit_size_id": 1
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 2,
+        "fields": {
+            "name": "Peach",
+            "price": 3.00,
+            "description": "A juicy and delicious peach.",
+            "quantity": 10,
+            "good_type_id": 2,
+            "merchant_id": 1,
+            "unit_size_id": 1
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 3,
+        "fields": {
+            "name": "Tomato",
+            "price": 7.00,
+            "description": "This is a fruit.",
+            "quantity": 15,
+            "good_type_id": 2,
+            "merchant_id": 1,
+            "unit_size_id": 1
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 4,
+        "fields": {
+            "name": "Pear",
+            "price": 6.00,
+            "description": "This is another fruit.",
+            "quantity": 12,
+            "good_type_id": 2,
+            "merchant_id": 1,
+            "unit_size_id": 1
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 5,
+        "fields": {
+            "name": "Honey",
+            "price": 15.00,
+            "description": "Honey from some bees and shit.",
+            "quantity": 15,
+            "good_type_id": 5,
+            "merchant_id": 1,
+            "unit_size_id": 1
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 6,
+        "fields": {
+            "name": "Orange",
+            "price": 10.00,
+            "description": "Juicy oranges",
+            "quantity": 15,
+            "good_type_id": 2,
+            "merchant_id": 1,
+            "unit_size_id": 1
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 7,
+        "fields": {
+            "name": "Pork Chops",
+            "price": 20.00,
+            "description": "Very good stuff",
+            "quantity": 20,
+            "good_type_id": 1,
+            "merchant_id": 2,
+            "unit_size_id": 2
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 8,
+        "fields": {
+            "name": "Sirloin",
+            "price": 15.00,
+            "description": "Very good stuff",
+            "quantity": 15,
+            "good_type_id": 1,
+            "merchant_id": 2,
+            "unit_size_id": 2
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 9,
+        "fields": {
+            "name": "Lamb Chops",
+            "price": 30.00,
+            "description": "Yummy",
+            "quantity": 10,
+            "good_type_id": 1,
+            "merchant_id": 2,
+            "unit_size_id": 2
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 10,
+        "fields": {
+            "name": "Chicken",
+            "price": 15.00,
+            "description": "Finger lickin' good",
+            "quantity": 6,
+            "good_type_id": 1,
+            "merchant_id": 2,
+            "unit_size_id": 2
+        }
+    },
+    {
+        "model": "virtumarketapi.good",
+        "pk": 11,
+        "fields": {
+            "name": "Ground Beef",
+            "price": 12.00,
+            "description": "Good for burgers.",
+            "quantity": 6,
+            "good_type_id": 1,
+            "merchant_id": 2,
+            "unit_size_id": 2
+        }
+    }
+]

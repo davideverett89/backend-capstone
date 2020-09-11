@@ -3,8 +3,80 @@
         "model": "virtumarketapi.market",
         "pk": 1,
         "fields": {
-            "name": "Nashville Farmer's Market",
+            "name": "Nashville Farmers' Market",
             "zipcode": 37208
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 2,
+        "fields": {
+            "name": "Hip Donelson Farmers' Market",
+            "zipcode": 37214
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 3,
+        "fields": {
+            "name": "Richland Park Farmers' Market",
+            "zipcode": 37209
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 4,
+        "fields": {
+            "name": "Rutherford County Farmers' Market",
+            "zipcode": 37129
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 5,
+        "fields": {
+            "name": "East Nashville Farmers' Market",
+            "zipcode": 37206
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 6,
+        "fields": {
+            "name": "12 South Farmers' Market",
+            "zipcode": 37212
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 7,
+        "fields": {
+            "name": "Franklin Farmers' Market",
+            "zipcode": 37064
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 8,
+        "fields": {
+            "name": "Nolensville Farmers' Market",
+            "zipcode": 37135
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 9,
+        "fields": {
+            "name": "Brentwood Farmers' Market",
+            "zipcode": 37027
+        }
+    },
+    {
+        "model": "virtumarketapi.market",
+        "pk": 10,
+        "fields": {
+            "name": "Old Hickory Village Farmers' Market",
+            "zipcode": 37138
         }
     }
 ]
