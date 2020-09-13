@@ -20,6 +20,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 from virtumarketapi.views import *
 
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r"markets", Markets, "market")
 
 urlpatterns = [
     path('', include(router.urls)),
