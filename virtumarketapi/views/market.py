@@ -4,15 +4,21 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from virtumarketapi.models import Market
 
-class MarketSerializer(serializers.ModelSerializer):
+class MarketSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Market
 
+        url = serializers.HyperlinkedIdentityField(
+            view_name="market",
+            lookup_field="id"
+        )
+
         fields = (
             "id",
             "name",
-            "zip_code"
+            "zip_code",
+            "url"
         )
         depth = 1
 
