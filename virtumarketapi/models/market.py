@@ -3,7 +3,7 @@ from django.db import models
 class Market(models.Model):
 
     name = models.CharField(max_length=50)
-    zipcode = models.IntegerField()
+    zip_code = models.IntegerField()
 
     class Meta:
         verbose_name = ("market")
