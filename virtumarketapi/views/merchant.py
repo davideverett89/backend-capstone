@@ -52,13 +52,8 @@ class Merchants(ViewSet):
 
     def retrieve(self, request, pk=None):
 
-        merchant = None
-
         try:
-            if request.user.id:
-                merchant = Merchant.objects.filter(user=request.user.id)
-            else:
-                merchant = Merchant.objects.get(pk=pk)
+            merchant = Merchant.objects.get(pk=pk)
 
             serializer = MerchantSerializer(
                 merchant,
@@ -70,11 +65,23 @@ class Merchants(ViewSet):
 
     def list(self, request):
 
-        merchants = Merchant.objects.all()
-
-        serializer = MerchantSerializer(
-            merchants,
+        if request.user.id:
+            print('You should get one merchant')
+            merchant = Merchant.objects.filter(user_id=request.user.id)
+            serializer = MerchantSerializer(
+            merchant,
             many=True,
             context={"request": request}
-        )
-        return Response(serializer.data)
+            )
+            return Response(serializer.data)
+        else:
+            print('You should get all merchants')
+            merchants = Merchant.objects.all()
+
+            serializer = MerchantSerializer(
+                merchants,
+                many=True,
+                context={"request": request}
+            )
+            return Response(serializer.data)
+    

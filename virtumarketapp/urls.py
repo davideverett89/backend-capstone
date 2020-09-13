@@ -24,6 +24,7 @@ router.register(r"markets", Markets, "market")
 router.register(r"goods", Goods, "good")
 router.register(r"merchants", Merchants, "merchant")
 
+
 urlpatterns = [
     path('', include(router.urls)),
     path('register/merchant', register_merchant),
