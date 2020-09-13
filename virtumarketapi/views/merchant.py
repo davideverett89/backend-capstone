@@ -77,6 +77,7 @@ class Merchants(ViewSet):
     @action(detail=False)
     def current_user(self, request):
         user = self.request.user
+        print(user.id)
 
         merchant = Merchant.objects.get(user_id=user.id)
         
