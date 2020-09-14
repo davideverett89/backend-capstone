@@ -6,6 +6,7 @@ from .merchant import Merchant
 class Good(models.Model):
 
     name = models.CharField(max_length=50)
+    image = models.CharField(max_length=500, null=True)
     price = models.DecimalField(decimal_places=2, max_digits=10)
     description = models.CharField(max_length=100)
     quantity = models.IntegerField()

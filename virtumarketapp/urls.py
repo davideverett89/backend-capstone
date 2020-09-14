@@ -21,6 +21,9 @@ from virtumarketapi.views import *
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"markets", Markets, "market")
+router.register(r"goods", Goods, "good")
+router.register(r"merchants", Merchants, "merchant")
+
 
 urlpatterns = [
     path('', include(router.urls)),
