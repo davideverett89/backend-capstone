@@ -92,3 +92,20 @@ class Goods(ViewSet):
 
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    def patch(self, request, pk=None):
+
+        good = Good.objects.get(pk=pk)
+        unit_size = UnitSize.objects.get(pk=request.data["unit_size_id"])
+
+        good.name = request.data["name"]
+        good.image = request.data["image"]
+        good.price = request.data["price"]
+        good.description = request.data["description"]
+        good.quantity = request.data["quantity"]
+        good.unit_size = unit_size
+
+        good.save()
+
+        return Response({}, status=status.HTTP_204_NO_CONTENT)
+
