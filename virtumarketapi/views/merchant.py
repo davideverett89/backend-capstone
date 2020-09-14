@@ -73,18 +73,3 @@ class Merchants(ViewSet):
             context={"request": request}
         )
         return Response(serializer.data)
-
-    @action(detail=False)
-    def current_user(self, request):
-        user = request.user
-        token = request.auth
-        print(user)
-        print(token)
-
-        merchant = Merchant.objects.get(user_id=user.id)
-        
-        serializer = MerchantSerializer(
-        merchant,
-        context={"request": request}
-        )
-        return Response(serializer.data)
