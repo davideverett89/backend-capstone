@@ -12,7 +12,7 @@ class Good(models.Model):
     quantity = models.IntegerField()
     good_type = models.ForeignKey(GoodType, on_delete=models.DO_NOTHING, related_name="goods")
     merchant = models.ForeignKey(Merchant, on_delete=models.DO_NOTHING, related_name="goods")
-    unit_size = models.ForeignKey(GoodType, on_delete=models.DO_NOTHING)
+    unit_size = models.ForeignKey(UnitSize, on_delete=models.DO_NOTHING)
 
     class Meta:
         verbose_name = ("good")

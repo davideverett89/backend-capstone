@@ -52,3 +52,29 @@ class Goods(ViewSet):
             context={"request": request}
         )
         return Response(serializer.data)
+
+    def create(self, request):
+
+        print('POST request:', request.data)
+
+        new_good = Good()
+        merchant = Merchant.objects.get(user=request.auth.user)
+        good_type = GoodType.objects.get(pk=request.data["good_type_id"])
+        unit_size = UnitSize.objects.get(pk=request.data["unit_size_id"])
+
+        new_good.name = request.data["name"]
+        new_good.image = request.data["image"]
+        new_good.price = request.data["price"]
+        new_good.description = request.data["description"]
+        new_good.quantity = request.data["quantity"]
+        new_good.good_type = good_type
+        new_good.merchant = merchant
+        new_good.unit_size = unit_size
+
+        new_good.save()
+
+        serializer = GoodSerializer(
+            new_good,
+            context={"request": request}
+        )
+        return Response(serializer.data)
