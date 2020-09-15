@@ -9,7 +9,7 @@ class Merchant(models.Model):
     company_name = models.CharField(max_length=50)
     image = models.CharField(max_length=500)
     phone_number = models.CharField(max_length=50)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="merchants")
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="merchant")
     market = models.ForeignKey(Market, on_delete=models.CASCADE, related_name="merchants")
 
 

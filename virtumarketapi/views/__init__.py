@@ -5,4 +5,5 @@ from .market import Markets
 from .merchant import Merchants
 from .good_type import GoodTypes
 from .unit_size import UnitSizes
+from .user import Users
 from .good import Goods, GoodSerializer

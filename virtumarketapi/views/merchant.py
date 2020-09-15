@@ -7,6 +7,20 @@ from virtumarketapi.models import Merchant, Good
 from django.contrib.auth.models import User
 from .good import GoodSerializer
 
+class MerchantUserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Merchant
+        fields = (
+            "id",
+            "url",
+            "company_name",
+            "image",
+            "phone_number",
+            "market"
+        )
+        depth = 2
+
 # class UserSerializer(serializers.ModelSerializer):
 
 #     class Meta:

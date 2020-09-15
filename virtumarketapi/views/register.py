@@ -30,11 +30,11 @@ def login_user(request):
             
             if Merchant.objects.filter(user=authenticated_user).exists():
                 merchant = Merchant.objects.get(user=authenticated_user)
-                data = json.dumps({"valid": True, "token": token.key, "user_role": "merchant", "id": merchant.id})
+                data = json.dumps({"valid": True, "token": token.key, "user_role": "merchant", "id": merchant.id, "uid": authenticated_user.id})
                 return HttpResponse(data, content_type='application/json')
             if Consumer.objects.filter(user=authenticated_user).exists():
                 consumer = Consumer.objects.get(user=authenticated_user)
-                data = json.dumps({"valid": True, "token": token.key, "user_role": "consumer", "id": consumer.id})
+                data = json.dumps({"valid": True, "token": token.key, "user_role": "consumer", "id": consumer.id, "uid": authenticated_user.id})
                 return HttpResponse(data, content_type='application/json')
 
         else:
