@@ -30,11 +30,23 @@ def login_user(request):
             
             if Merchant.objects.filter(user=authenticated_user).exists():
                 merchant = Merchant.objects.get(user=authenticated_user)
-                data = json.dumps({"valid": True, "token": token.key, "user_role": "merchant", "id": merchant.id, "uid": authenticated_user.id})
+                data = json.dumps({
+                    "valid": True,
+                    "token": token.key,
+                    "user_role": "merchant",
+                    "id": merchant.id,
+                    "uid": authenticated_user.id
+                })
                 return HttpResponse(data, content_type='application/json')
             if Consumer.objects.filter(user=authenticated_user).exists():
                 consumer = Consumer.objects.get(user=authenticated_user)
-                data = json.dumps({"valid": True, "token": token.key, "user_role": "consumer", "id": consumer.id, "uid": authenticated_user.id})
+                data = json.dumps({
+                    "valid": True,
+                    "token": token.key,
+                    "user_role": "consumer",
+                    "id": consumer.id,
+                    "uid": authenticated_user.id
+                })
                 return HttpResponse(data, content_type='application/json')
 
         else:
@@ -72,7 +84,12 @@ def register_merchant(request):
 
     token = Token.objects.create(user=new_user)
 
-    data = json.dumps({"token": token.key, "user_role": "merchant", "id": merchant.id})
+    data = json.dumps({
+        "token": token.key,
+        "user_role": "merchant",
+        "id": merchant.id,
+        "uid": new_user.id
+    })
     return HttpResponse(data, content_type='application/json')
 
 @csrf_exempt
@@ -103,5 +120,23 @@ def register_consumer(request):
 
     token = Token.objects.create(user=new_user)
 
-    data = json.dumps({"token": token.key, "user_role": "consumer", "id": consumer.id})
+    data = json.dumps({
+        "token": token.key,
+        "user_role": "consumer",
+        "id": consumer.id,
+        "uid": new_user.id
+    })
     return HttpResponse(data, content_type='application/json')
+
+def setcookie(request):
+    html = HttpResponse("<h1>Dataflair Django Tutorial</h1>")
+    if request.COOKIES.get('visits'):
+        html.set_cookie('dataflair', 'Welcome Back')
+        value = int(request.COOKIES.get('visits'))
+        html.set_cookie('visits', value + 1)
+    else:
+        value = 1
+        text = "Welcome for the first time"
+        html.set_cookie('visits', value)
+        html.set_cookie('dataflair', text)
+    return html
