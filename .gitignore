@@ -71,4 +71,4 @@ media/
 
 # django migrations
 migrations
-virtumarket.session.sql
+virtumarketapi.session.sql

@@ -74,7 +74,9 @@ def register_merchant(request):
 
     merchant = Merchant.objects.create(
         company_name=req_body['company_name'],
-        image=req_body['image'],
+        bio=req_body['bio'],
+        profile_image=req_body['profile_image'],
+        booth_image=req_body['booth_image'],
         phone_number=req_body['phone_number'],
         market=Market.objects.get(pk=req_body['market_id']),
         user=new_user
@@ -111,7 +113,8 @@ def register_consumer(request):
     )
 
     consumer = Consumer.objects.create(
-        image=req_body['image'],
+        bio=req_body['bio'],
+        profile_image=req_body['profile_image'],
         phone_number=req_body['phone_number'],
         user=new_user
     )
