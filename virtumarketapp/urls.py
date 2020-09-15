@@ -25,6 +25,7 @@ router.register(r"goods", Goods, "good")
 router.register(r"merchants", Merchants, "merchant")
 router.register(r"good_types", GoodTypes, "good_type")
 router.register(r"unit_sizes", UnitSizes, "unit_size")
+router.register(r"users", Users, "user")
 
 
 urlpatterns = [
