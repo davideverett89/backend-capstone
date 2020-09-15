@@ -14,8 +14,10 @@ class MerchantUserSerializer(serializers.ModelSerializer):
         fields = (
             "id",
             "url",
+            "bio",
+            "profile_image",
+            "booth_image",
             "company_name",
-            "image",
             "phone_number",
             "market"
         )
@@ -54,8 +56,8 @@ class MerchantSerializer(serializers.HyperlinkedModelSerializer):
             "id",
             "url",
             "company_name",
-            "image",
-            "phone_number",
+            "profile_image",
+            "booth_image",
             "user_id",
             "market_id",
             "goods"
