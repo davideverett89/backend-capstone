@@ -3,8 +3,11 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from virtumarketapi.models import Market
+from .merchant import MarketMerchantSerializer
 
 class MarketSerializer(serializers.HyperlinkedModelSerializer):
+
+    merchants = MarketMerchantSerializer(many=True, read_only=True)
 
     class Meta:
         model = Market
@@ -20,6 +23,7 @@ class MarketSerializer(serializers.HyperlinkedModelSerializer):
             "image",
             "description",
             "zip_code",
+            "merchants",
             "url"
         )
         depth = 1

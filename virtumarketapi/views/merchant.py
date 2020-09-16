@@ -80,6 +80,24 @@ class MerchantSerializer(serializers.HyperlinkedModelSerializer):
         )
         depth = 1
 
+class MarketMerchantSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Merchant
+
+        fields = (
+            "id",
+            "url",
+            "company_name",
+            "profile_image",
+            "bio",
+            "phone_number",
+            "booth_image",
+            "user_id",
+            "market_id",
+        )
+        depth = 1
+
 class Merchants(ViewSet):
 
     def retrieve(self, request, pk=None):
