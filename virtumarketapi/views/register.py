@@ -130,16 +130,3 @@ def register_consumer(request):
         "uid": new_user.id
     })
     return HttpResponse(data, content_type='application/json')
-
-def setcookie(request):
-    html = HttpResponse("<h1>Dataflair Django Tutorial</h1>")
-    if request.COOKIES.get('visits'):
-        html.set_cookie('dataflair', 'Welcome Back')
-        value = int(request.COOKIES.get('visits'))
-        html.set_cookie('visits', value + 1)
-    else:
-        value = 1
-        text = "Welcome for the first time"
-        html.set_cookie('visits', value)
-        html.set_cookie('dataflair', text)
-    return html
