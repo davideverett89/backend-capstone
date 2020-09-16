@@ -17,6 +17,8 @@ class MarketSerializer(serializers.HyperlinkedModelSerializer):
         fields = (
             "id",
             "name",
+            "image",
+            "description",
             "zip_code",
             "url"
         )
