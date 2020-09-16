@@ -23,6 +23,22 @@ class MerchantUserSerializer(serializers.ModelSerializer):
         )
         depth = 2
 
+class SimpleMerchantUserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Merchant
+        fields = (
+            "id",
+            "url",
+            "bio",
+            "profile_image",
+            "booth_image",
+            "company_name",
+            "phone_number",
+            "market_id"
+        )
+        depth = 1
+
 # class UserSerializer(serializers.ModelSerializer):
 
 #     class Meta:
