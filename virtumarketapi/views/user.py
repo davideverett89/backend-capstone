@@ -7,11 +7,13 @@ from virtumarketapi.models import Merchant, Consumer, Market
 from rest_framework.decorators import action
 from rest_framework import status
 from .merchant import MerchantUserSerializer
+from .consumer import ConsumerUserSerializer
 from .merchant import SimpleMerchantUserSerializer
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     merchant = MerchantUserSerializer()
+    consumer = ConsumerUserSerializer()
 
     class Meta:
         model = User
@@ -29,7 +31,8 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
             "last_name",
             "email",
             "date_joined",
-            "merchant"
+            "merchant",
+            "consumer"
         )
         depth = 1
 

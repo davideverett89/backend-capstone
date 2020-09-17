@@ -2,7 +2,6 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from rest_framework.decorators import action
 from virtumarketapi.models import Merchant, Good
 from django.contrib.auth.models import User
 from .good import GoodSerializer
@@ -21,7 +20,7 @@ class MerchantUserSerializer(serializers.ModelSerializer):
             "phone_number",
             "market"
         )
-        depth = 2
+        depth = 1
 
 class SimpleMerchantUserSerializer(serializers.ModelSerializer):
 
