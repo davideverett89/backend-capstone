@@ -5,10 +5,12 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from virtumarketapi.models import Merchant, Consumer
 from .merchant import SimpleMerchantUserSerializer
+from .consumer import ConsumerUserSerializer
 
 class SimpleUserSerializer(serializers.HyperlinkedModelSerializer):
 
     merchant = SimpleMerchantUserSerializer()
+    consumer = ConsumerUserSerializer()
 
     class Meta:
         model = User
@@ -26,7 +28,8 @@ class SimpleUserSerializer(serializers.HyperlinkedModelSerializer):
             "last_name",
             "email",
             "date_joined",
-            "merchant"
+            "merchant",
+            "consumer"
         )
         depth = 1
 
