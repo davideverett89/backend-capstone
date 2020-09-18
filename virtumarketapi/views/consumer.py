@@ -4,8 +4,11 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from virtumarketapi.models import Consumer
+from .payment_method import PaymentMethodSerializer
 
 class ConsumerUserSerializer(serializers.ModelSerializer):
+
+    paymentmethods = PaymentMethodSerializer(many=True, read_only=True)
 
     class Meta:
         model = Consumer
@@ -15,7 +18,8 @@ class ConsumerUserSerializer(serializers.ModelSerializer):
             "bio",
             "profile_image",
             "phone_number",
-            "user_id"
+            "user_id",
+            "paymentmethods"
         )
         depth = 1
 

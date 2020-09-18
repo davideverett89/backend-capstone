@@ -7,7 +7,7 @@ class PaymentMethod(models.Model):
     account_number = models.CharField(max_length=50)
     expiration_date = models.DateField()
     creation_date = models.DateField()
-    consumer = models.ForeignKey(Consumer, on_delete=models.DO_NOTHING, related_name="payment_methods")
+    consumer = models.ForeignKey(Consumer, on_delete=models.DO_NOTHING, related_name="paymentmethods")
 
 
     class Meta:

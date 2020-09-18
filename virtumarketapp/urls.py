@@ -24,9 +24,10 @@ router.register(r"markets", Markets, "market")
 router.register(r"goods", Goods, "good")
 router.register(r"merchants", Merchants, "merchant")
 router.register(r"consumers", Consumers, "consumer")
-router.register(r"good_types", GoodTypes, "good_type")
-router.register(r"unit_sizes", UnitSizes, "unit_size")
+router.register(r"goodtypes", GoodTypes, "goodtype")
+router.register(r"unitsizes", UnitSizes, "unitsize")
 router.register(r"users", Users, "user")
+router.register(r"paymentmethods", PaymentMethods, "paymentmethod")
 router.register(r"accounts/edit", UserRoles, "user_roles")
 
 
