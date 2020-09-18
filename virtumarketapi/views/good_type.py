@@ -10,13 +10,14 @@ class GoodTypeSerializer(serializers.HyperlinkedModelSerializer):
         model = GoodType
 
         url = serializers.HyperlinkedIdentityField(
-            view_name="good_type",
+            view_name="goodtype",
             lookup_field="id"
         )
 
         fields = (
             "id",
-            "name"
+            "name",
+            "url"
         )
         depth = 1
 

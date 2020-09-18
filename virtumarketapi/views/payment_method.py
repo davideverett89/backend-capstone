@@ -2,33 +2,37 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from virtumarketapi.models import UnitSize
+from virtumarketapi.models import PaymentMethod, Consumer
 
-class UnitSizeSerializer(serializers.HyperlinkedModelSerializer):
+class PaymentMethodSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = UnitSize
+        model = PaymentMethod
 
         url = serializers.HyperlinkedIdentityField(
-            view_name="unitsize",
+            view_name="paymentmethod",
             lookup_field="id"
         )
 
         fields = (
             "id",
-            "name",
+            "merchant_name",
+            "account_number",
+            "expiration_date",
+            "creation_date",
+            "consumer_id",
             "url"
         )
         depth = 1
 
-class UnitSizes(ViewSet):
+class PaymentMethods(ViewSet):
 
     def retrieve(self, request, pk=None):
 
         try:
-            unit_size = UnitSize.objects.get(pk=pk)
-            serializer = UnitSizeSerializer(
-                unit_size,
+            payment_method = PaymentMethod.objects.get(pk=pk)
+            serializer = PaymentMethodSerializer(
+                payment_method,
                 context={"request": request}
             )
             return Response(serializer.data)
@@ -37,9 +41,9 @@ class UnitSizes(ViewSet):
 
     def list(self, request):
 
-        unit_sizes = UnitSize.objects.all()
-        serializer = UnitSizeSerializer(
-            unit_sizes,
+        payment_methods = PaymentMethod.objects.all()
+        serializer = PaymentMethodSerializer(
+            payment_methods,
             many=True,
             context={"request": request}
         )
