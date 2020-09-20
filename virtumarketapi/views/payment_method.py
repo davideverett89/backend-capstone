@@ -2,6 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
+from rest_framework import status
 from virtumarketapi.models import PaymentMethod, Consumer
 
 class PaymentMethodSerializer(serializers.HyperlinkedModelSerializer):
@@ -68,3 +69,16 @@ class PaymentMethods(ViewSet):
             context={"request": request}
         )
         return Response(serializer.data)
+
+    def destroy(self, request, pk=None):
+
+        try:
+            payment_method = PaymentMethod.objects.get(pk=pk)
+            payment_method.delete()
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+        except PaymentMethod.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status.HTTP_404_NOT_FOUND)
+
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
