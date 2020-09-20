@@ -48,3 +48,23 @@ class PaymentMethods(ViewSet):
             context={"request": request}
         )
         return Response(serializer.data)
+
+    def create(self, request):
+
+        payment_method = PaymentMethod()
+
+        consumer = Consumer.objects.get(pk=request.data["consumer_id"])
+
+        payment_method.merchant_name = request.data["merchant_name"]
+        payment_method.account_number = request.data["account_number"]
+        payment_method.expiration_date = request.data["expiration_date"]
+        payment_method.creation_date = request.data["creation_date"]
+        payment_method.consumer = consumer
+
+        payment_method.save()
+
+        serializer = PaymentMethodSerializer(
+            payment_method,
+            context={"request": request}
+        )
+        return Response(serializer.data)

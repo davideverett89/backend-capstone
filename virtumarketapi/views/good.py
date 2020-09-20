@@ -56,8 +56,6 @@ class Goods(ViewSet):
 
     def create(self, request):
 
-        print('POST request:', request.data)
-
         new_good = Good()
         merchant = Merchant.objects.get(user=request.auth.user)
         good_type = GoodType.objects.get(pk=request.data["good_type_id"])
