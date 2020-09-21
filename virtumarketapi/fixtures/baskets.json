@@ -12,9 +12,9 @@
         "model": "virtumarketapi.basket",
         "pk": 2,
         "fields": {
-            "date_completed": null,
+            "date_completed": "2020-09-18",
             "consumer_id": 1,
-            "payment_method_id": null
+            "payment_method_id": 2
         }
     }
 ]
