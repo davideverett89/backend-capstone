@@ -70,4 +70,4 @@ class Baskets(ViewSet):
             return Response(serializer.data)
 
         except Basket.DoesNotExist as ex:
-            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
