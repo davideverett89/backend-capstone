@@ -1,13 +1,16 @@
 from django.db import models
 from .consumer import Consumer
+from safedelete.models import SafeDeleteModel, SOFT_DELETE
 
-class PaymentMethod(models.Model):
+class PaymentMethod(SafeDeleteModel):
 
     merchant_name = models.CharField(max_length=50)
     account_number = models.CharField(max_length=50)
     expiration_date = models.DateField()
     creation_date = models.DateField()
     consumer = models.ForeignKey(Consumer, on_delete=models.DO_NOTHING, related_name="paymentmethods")
+    _safedelete_policy = SOFT_DELETE
+
 
 
     class Meta:
