@@ -1,0 +1,20 @@
+[
+    {
+        "model": "virtumarketapi.basket",
+        "pk": 1,
+        "fields": {
+            "date_completed": "2020-09-18",
+            "consumer_id": 1,
+            "payment_method_id": 1
+        }
+    },
+    {
+        "model": "virtumarketapi.basket",
+        "pk": 2,
+        "fields": {
+            "date_completed": null,
+            "consumer_id": 1,
+            "payment_method_id": null
+        }
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 1,
+        "fields": {
+            "date_added": "2020-09-21",
+            "basket_id": 1,
+            "good_id": 1
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 2,
+        "fields": {
+            "date_added": "2020-09-21",
+            "basket_id": 1,
+            "good_id": 2
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 3,
+        "fields": {
+            "date_added": "2020-09-21",
+            "basket_id": 1,
+            "good_id": 5
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 4,
+        "fields": {
+            "date_added": "2020-09-21",
+            "basket_id": 1,
+            "good_id": 10
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 5,
+        "fields": {
+            "date_added": "2020-09-21",
+            "basket_id": 1,
+            "good_id": 11
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 6,
+        "fields": {
+            "date_added": "2020-09-22",
+            "basket_id": 2,
+            "good_id": 11
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 7,
+        "fields": {
+            "date_added": "2020-09-22",
+            "basket_id": 2,
+            "good_id": 6
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 8,
+        "fields": {
+            "date_added": "2020-09-22",
+            "basket_id": 2,
+            "good_id": 4
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 9,
+        "fields": {
+            "date_added": "2020-09-22",
+            "basket_id": 2,
+            "good_id": 10
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 10,
+        "fields": {
+            "date_added": "2020-09-22",
+            "basket_id": 2,
+            "good_id": 2
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 11,
+        "fields": {
+            "date_added": "2020-09-22",
+            "basket_id": 2,
+            "good_id": 9
+        }
+    },
+    {
+        "model": "virtumarketapi.goodbasket",
+        "pk": 12,
+        "fields": {
+            "date_added": "2020-09-22",
+            "basket_id": 2,
+            "good_id": 7
+        }
+    }
+]

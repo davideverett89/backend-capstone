@@ -28,6 +28,7 @@ router.register(r"goodtypes", GoodTypes, "goodtype")
 router.register(r"unitsizes", UnitSizes, "unitsize")
 router.register(r"users", Users, "user")
 router.register(r"paymentmethods", PaymentMethods, "paymentmethod")
+router.register(r"baskets", Baskets, "basket")
 router.register(r"accounts/edit", UserRoles, "user_roles")
 
 

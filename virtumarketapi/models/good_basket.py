@@ -4,8 +4,8 @@ from .basket import Basket
 
 class GoodBasket(models.Model):
 
-    basket = models.ForeignKey(Basket, on_delete=models.CASCADE)
-    good = models.ForeignKey(Good, on_delete=models.DO_NOTHING)
+    basket = models.ForeignKey(Basket, on_delete=models.CASCADE, related_name="current")
+    good = models.ForeignKey(Good, on_delete=models.DO_NOTHING, related_name="current")
     date_added = models.DateField()
 
     class Meta:

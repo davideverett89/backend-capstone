@@ -7,6 +7,7 @@ from .consumer import Consumers
 from .good_type import GoodTypes
 from .unit_size import UnitSizes
 from .user import Users
+from .basket import Baskets
 from .user_role import UserRoles
 from .good import Goods, GoodSerializer
 from .payment_method import PaymentMethods
