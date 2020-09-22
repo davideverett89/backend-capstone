@@ -25,7 +25,7 @@ class GoodSerializer(serializers.HyperlinkedModelSerializer):
             "price",
             "description",
             "quantity",
-            "good_type_id",
+            "good_type",
             "merchant_id",
             "unit_size",
             "url",
@@ -53,7 +53,7 @@ class Goods(ViewSet):
 
     def list(self, request):
 
-        goods = Good.objects.all()
+        goods = Good.objects.all() 
 
         serializer = GoodSerializer(
             goods,
