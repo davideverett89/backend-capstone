@@ -3,9 +3,12 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from virtumarketapi.models import Good, Merchant, GoodType, UnitSize
+from virtumarketapi.models import Good, Merchant, GoodType, UnitSize, GoodBasket
+from .good_basket import GoodBasketSerializer
 
 class GoodSerializer(serializers.HyperlinkedModelSerializer):
+
+    number_on_order = serializers.SerializerMethodField()
 
     class Meta:
         model = Good
@@ -24,10 +27,15 @@ class GoodSerializer(serializers.HyperlinkedModelSerializer):
             "quantity",
             "good_type_id",
             "merchant_id",
-            "unit_size_id",
-            "url"
+            "unit_size",
+            "url",
+            "number_on_order"
         )
         depth = 1
+
+    def get_number_on_order(self, obj):
+        good_baskets = GoodBasket.objects.filter(good=obj)
+        return len(good_baskets)
 
 class Goods(ViewSet):
 

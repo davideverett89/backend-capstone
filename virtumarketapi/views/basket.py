@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 from rest_framework.decorators import action
-from virtumarketapi.models import Basket, GoodBasket, Consumer
+from virtumarketapi.models import Basket, GoodBasket, Consumer, Good
 from .good import GoodSerializer
 
 class BasketSerializer(serializers.HyperlinkedModelSerializer):
@@ -25,7 +25,7 @@ class BasketSerializer(serializers.HyperlinkedModelSerializer):
             "date_completed",
             "consumer_id",
             "payment_method_id",
-            "goods"
+            "goods",
         )
         depth = 1
 
