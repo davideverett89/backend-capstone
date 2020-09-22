@@ -40,6 +40,13 @@ class GoodBaskets(ViewSet):
     def list(self, request):
 
         good_baskets = GoodBasket.objects.all()
+
+        good_id = self.request.query_params.get('good', None)
+
+        if good_id is not None:
+
+            good_baskets = GoodBasket.objects.filter(good_id=good_id)
+
         serializer = GoodBasketSerializer(
             good_baskets,
             many=True,
