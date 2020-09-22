@@ -28,6 +28,7 @@ class GoodSerializer(serializers.HyperlinkedModelSerializer):
             "good_type",
             "merchant_id",
             "unit_size",
+            "unit_size_id",
             "url",
             "number_on_order"
         )
