@@ -53,16 +53,7 @@ class Goods(ViewSet):
 
     def list(self, request):
 
-        goods = Good.objects.all()
-
-        # market = self.request.query_params.get('market', None)
-        name = self.request.query_params.get('name', None)
-
-        if name is not None:
-            merchants = list()
-            goods = Good.objects.filter(name=name)
-            for good in goods:
-                merchant = Merchant.objects.get(pk=good.merchant_id) 
+        goods = Good.objects.all() 
 
         serializer = GoodSerializer(
             goods,
