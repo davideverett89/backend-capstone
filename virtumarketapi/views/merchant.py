@@ -132,7 +132,12 @@ class Merchants(ViewSet):
         elif good_type is not None and market is not None:
             final_merchants = set()
             market = Market.objects.get(pk=market)
-            good_type = GoodType.objects.get(name=good_type)
+            try: 
+                good_type = GoodType.objects.get(name__startswith=good_type)
+
+            except GoodType.DoesNotExist:
+                good_type = None
+
             searched_goods = Good.objects.filter(good_type=good_type)
             for good in searched_goods:
                 merchant = Merchant.objects.get(pk=good.merchant_id)
