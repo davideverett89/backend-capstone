@@ -2,8 +2,10 @@ from django.db import models
 from .good_type import GoodType
 from .unit_size import UnitSize
 from .merchant import Merchant
+from safedelete.models import SafeDeleteModel
+from safedelete.models import SOFT_DELETE
 
-class Good(models.Model):
+class Good(SafeDeleteModel):
 
     name = models.CharField(max_length=50)
     image = models.CharField(max_length=500, null=True)
@@ -13,7 +15,7 @@ class Good(models.Model):
     good_type = models.ForeignKey(GoodType, on_delete=models.DO_NOTHING, related_name="good")
     merchant = models.ForeignKey(Merchant, on_delete=models.DO_NOTHING, related_name="goods")
     unit_size = models.ForeignKey(UnitSize, on_delete=models.DO_NOTHING, related_name="good")
-    number_on_order = models.IntegerField(blank=True, default=0)
+    _safedelete_policy = SOFT_DELETE
 
     class Meta:
         verbose_name = ("good")

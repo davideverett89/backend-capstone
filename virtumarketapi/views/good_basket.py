@@ -57,39 +57,51 @@ class GoodBaskets(ViewSet):
     def create(self, request):
 
         current_user = Consumer.objects.get(user=request.auth.user)
-
-        new_good_basket = GoodBasket()
         good = Good.objects.get(pk=request.data["good_id"])
-        new_good_basket.good = good
-        new_good_basket.date_added = request.data["date_added"]
 
         try:
 
-            basket = Basket.objects.get(consumer=current_user, payment_method=None, date_completed=None)
-            new_good_basket.basket = basket
-            new_good_basket.save()
 
-            serializer = GoodBasketSerializer(
-                new_good_basket,
-                context={"request": request}
-            )
-            return Response(serializer.data)
+            if good.quantity > 0:
 
-        except Basket.DoesNotExist:
+                new_good_basket = GoodBasket()
 
-            new_basket = Basket()
-            new_basket.consumer = current_user
-            new_basket.payment_method_id = None
-            new_basket.date_completed = None
-            new_basket.save()
+                good.quantity -= 1
+                good.save()
 
-            new_good_basket.basket = new_basket
-            new_good_basket.save()
+                new_good_basket.good = good
+                new_good_basket.date_added = request.data["date_added"]
 
-            serializer = GoodBasketSerializer(
-                new_good_basket,
-                context={"request": request}
-            )
-            return Response(serializer.data)
+                try:
+
+                    basket = Basket.objects.get(consumer=current_user, payment_method=None, date_completed=None)
+                    new_good_basket.basket = basket
+                    new_good_basket.save()
+
+                    serializer = GoodBasketSerializer(
+                        new_good_basket,
+                        context={"request": request}
+                    )
+                    return Response(serializer.data)
+
+                except Basket.DoesNotExist:
+
+                    new_basket = Basket()
+                    new_basket.consumer = current_user
+                    new_basket.payment_method_id = None
+                    new_basket.date_completed = None
+                    new_basket.save()
+
+                    new_good_basket.basket = new_basket
+                    new_good_basket.save()
+
+                    serializer = GoodBasketSerializer(
+                        new_good_basket,
+                        context={"request": request}
+                    )
+                    return Response(serializer.data)
+
+        except Exception as ex:
+            return HttpResponseServerError(ex)
 
 
