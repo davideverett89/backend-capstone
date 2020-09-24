@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "merchant_name": "Visa",
-            "account_number": "3334445555667777",
+            "account_number": "************7777",
             "expiration_date": "2020-12-11",
             "creation_date": "2016-12-11",
             "consumer_id": 1
@@ -15,7 +15,7 @@
         "pk": 2,
         "fields": {
             "merchant_name": "MasterCard",
-            "account_number": "3345654356787898",
+            "account_number": "************7898",
             "expiration_date": "2022-12-11",
             "creation_date": "2018-12-11",
             "consumer_id": 1
@@ -26,7 +26,7 @@
         "pk": 3,
         "fields": {
             "merchant_name": "Discover",
-            "account_number": "3232123443345567",
+            "account_number": "************5567",
             "expiration_date": "2020-10-30",
             "creation_date": "2016-10-30",
             "consumer_id": 1
