@@ -15,6 +15,7 @@ class Good(SafeDeleteModel):
     good_type = models.ForeignKey(GoodType, on_delete=models.DO_NOTHING, related_name="good")
     merchant = models.ForeignKey(Merchant, on_delete=models.DO_NOTHING, related_name="goods")
     unit_size = models.ForeignKey(UnitSize, on_delete=models.DO_NOTHING, related_name="good")
+    on_order = models.BooleanField(default=False)
     _safedelete_policy = SOFT_DELETE
 
     class Meta:

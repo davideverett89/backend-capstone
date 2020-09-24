@@ -8,7 +8,7 @@ from .good_basket import GoodBasketSerializer
 
 class GoodSerializer(serializers.HyperlinkedModelSerializer):
 
-    # number_on_order = serializers.SerializerMethodField()
+    on_order = serializers.SerializerMethodField()
 
     class Meta:
         model = Good
@@ -30,13 +30,15 @@ class GoodSerializer(serializers.HyperlinkedModelSerializer):
             "unit_size",
             "unit_size_id",
             "url",
-            # "number_on_order"
+            "on_order"
         )
         depth = 1
 
-    # def get_number_on_order(self, obj):
-    #     good_baskets = GoodBasket.objects.filter(good=obj)
-    #     return len(good_baskets)
+    def get_on_order(self, obj):
+        if GoodBasket.objects.filter(good=obj).exists():
+            return True
+        else:
+            return False
 
 class Goods(ViewSet):
 
