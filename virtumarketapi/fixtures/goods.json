@@ -10,7 +10,9 @@
             "quantity": 5,
             "good_type_id": 2,
             "merchant_id": 1,
-            "unit_size_id": 1
+            "unit_size_id": 1,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -24,7 +26,9 @@
             "quantity": 10,
             "good_type_id": 2,
             "merchant_id": 1,
-            "unit_size_id": 1
+            "unit_size_id": 1,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -38,7 +42,9 @@
             "quantity": 15,
             "good_type_id": 2,
             "merchant_id": 1,
-            "unit_size_id": 1
+            "unit_size_id": 1,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -52,7 +58,9 @@
             "quantity": 12,
             "good_type_id": 2,
             "merchant_id": 1,
-            "unit_size_id": 1
+            "unit_size_id": 1,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -66,7 +74,9 @@
             "quantity": 15,
             "good_type_id": 5,
             "merchant_id": 1,
-            "unit_size_id": 1
+            "unit_size_id": 1,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -80,7 +90,9 @@
             "quantity": 15,
             "good_type_id": 2,
             "merchant_id": 1,
-            "unit_size_id": 1
+            "unit_size_id": 1,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -94,7 +106,9 @@
             "quantity": 20,
             "good_type_id": 1,
             "merchant_id": 2,
-            "unit_size_id": 2
+            "unit_size_id": 2,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -108,7 +122,9 @@
             "quantity": 15,
             "good_type_id": 1,
             "merchant_id": 2,
-            "unit_size_id": 2
+            "unit_size_id": 2,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -122,7 +138,9 @@
             "quantity": 10,
             "good_type_id": 1,
             "merchant_id": 2,
-            "unit_size_id": 2
+            "unit_size_id": 2,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -136,7 +154,9 @@
             "quantity": 6,
             "good_type_id": 1,
             "merchant_id": 2,
-            "unit_size_id": 2
+            "unit_size_id": 2,
+            "deleted": null,
+            "on_order": false
         }
     },
     {
@@ -150,7 +170,9 @@
             "quantity": 6,
             "good_type_id": 1,
             "merchant_id": 2,
-            "unit_size_id": 2
+            "unit_size_id": 2,
+            "deleted": null,
+            "on_order": false
         }
     }
 ]
