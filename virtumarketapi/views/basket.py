@@ -69,5 +69,5 @@ class Baskets(ViewSet):
             )
             return Response(serializer.data)
 
-        except Basket.DoesNotExist as ex:
+        except Basket.DoesNotExist:
             return Response({}, status=status.HTTP_204_NO_CONTENT)
