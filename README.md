@@ -1,4 +1,4 @@
-# VirtuMarket: Where Shopping Locally is a Virtue.
+# VirtuMarket
 ## Description
 Virtumarket is a virtual farmer's market app that aims to connect Middle Tennessee shoppers who seek homegrown, locally sourced goods with the merchants and artisans who offer them.  
 
