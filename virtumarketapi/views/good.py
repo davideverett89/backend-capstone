@@ -30,7 +30,8 @@ class GoodSerializer(serializers.HyperlinkedModelSerializer):
             "unit_size",
             "unit_size_id",
             "url",
-            "on_order"
+            "deleted",
+            "on_order",
         )
         depth = 1
 
