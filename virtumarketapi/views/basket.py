@@ -24,6 +24,7 @@ class CompletedBasketSerializer(serializers.HyperlinkedModelSerializer):
             "consumer",
             "payment_method",
             "goods",
+            "total",
         )
         depth = 2
 class BasketSerializer(serializers.HyperlinkedModelSerializer):
@@ -45,6 +46,7 @@ class BasketSerializer(serializers.HyperlinkedModelSerializer):
             "consumer_id",
             "payment_method_id",
             "goods",
+            "total",
         )
         depth = 1
 
@@ -66,7 +68,21 @@ class Baskets(ViewSet):
 
         baskets = Basket.objects.all()
 
-        serializer = BasketSerializer(
+        history = self.request.query_params.get('history', None)
+
+        if history is not None:
+
+            filtered_baskets = Basket.objects.filter(consumer_id=history, payment_method_id__isnull=False)
+
+            serializer = BasketSerializer(
+                filtered_baskets,
+                many=True,
+                context={"request": request}
+            )
+            return Response(serializer.data)
+
+        else:
+            serializer = BasketSerializer(
             baskets,
             many=True,
             context={"request": request}
@@ -78,6 +94,7 @@ class Baskets(ViewSet):
         basket = Basket.objects.get(pk=pk)
 
         basket.payment_method_id = request.data["payment_method_id"]
+        basket.total = request.data["total"]
 
         basket.save()
 

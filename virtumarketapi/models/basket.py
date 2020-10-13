@@ -8,6 +8,7 @@ class Basket(models.Model):
     payment_method = models.ForeignKey(PaymentMethod, blank=True, null=True, on_delete=models.DO_NOTHING, related_name="basket")
     date_completed = models.DateField(blank=True, null=True)
     goods = models.ManyToManyField("Good", through=("GoodBasket"))
+    total = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
 
     class Meta:
         verbose_name = ("basket")
