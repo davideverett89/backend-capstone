@@ -7,6 +7,25 @@ from rest_framework.decorators import action
 from virtumarketapi.models import Basket, GoodBasket, Consumer, Good
 from .good import GoodSerializer
 
+class CompletedBasketSerializer(serializers.HyperlinkedModelSerializer):
+    goods = GoodSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Basket
+
+        url = serializers.HyperlinkedIdentityField(
+            view_name="basket",
+            lookup_field="id",
+        )
+
+        fields = (
+            "id",
+            "url",
+            "consumer",
+            "payment_method",
+            "goods",
+        )
+        depth = 2
 class BasketSerializer(serializers.HyperlinkedModelSerializer):
 
     goods = GoodSerializer(many=True, read_only=True)
@@ -54,6 +73,21 @@ class Baskets(ViewSet):
         )
         return Response(serializer.data)
 
+    def patch(self, request, pk=None):
+
+        basket = Basket.objects.get(pk=pk)
+
+        basket.payment_method_id = request.data["payment_method_id"]
+
+        basket.save()
+
+        serializer = CompletedBasketSerializer(
+            basket,
+            context={"request": request}
+        )
+
+        return Response(serializer.data)
+
     @action(methods=['get'], detail=True)
     def current(self, request, pk=None):
 
@@ -61,7 +95,7 @@ class Baskets(ViewSet):
 
         try:
 
-            current_basket = Basket.objects.get(consumer=consumer, payment_method=None)
+            current_basket = Basket.objects.get(consumer=consumer, payment_method=None, date_completed=None)
 
             serializer = BasketSerializer(
                 current_basket,
