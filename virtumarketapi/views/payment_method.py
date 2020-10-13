@@ -43,7 +43,19 @@ class PaymentMethods(ViewSet):
     def list(self, request):
 
         payment_methods = PaymentMethod.objects.all()
-        serializer = PaymentMethodSerializer(
+
+        consumer_id = self.request.query_params.get('consumer_id', None)
+
+        if consumer_id is not None:
+            filtered_payment_methods = PaymentMethod.objects.filter(consumer_id=consumer_id)
+            serializer = PaymentMethodSerializer(
+                filtered_payment_methods,
+                many=True,
+                context={"request": request}
+            )
+            return Response(serializer.data)
+        else:
+            serializer = PaymentMethodSerializer(
             payment_methods,
             many=True,
             context={"request": request}
