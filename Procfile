@@ -1,1 +1,1 @@
-web: gunicorn virtumarketapp.wsgi --log-file -
+web: gunicorn virtumarketapp.wsgi
