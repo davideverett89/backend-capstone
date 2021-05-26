@@ -3,8 +3,8 @@ from django.db import models
 class Market(models.Model):
 
     name = models.CharField(max_length=50)
-    image = models.CharField(max_length=500, default="")
-    description = models.CharField(max_length=300, default="")
+    image = models.CharField(default="")
+    description = models.CharField(default="")
     zip_code = models.IntegerField()
 
     class Meta:
