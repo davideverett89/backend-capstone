@@ -70,5 +70,4 @@ media/
 *.pid
 
 # django migrations
-migrations
 virtumarketapi.session.sql
