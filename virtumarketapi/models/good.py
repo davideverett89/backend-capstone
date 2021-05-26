@@ -7,10 +7,10 @@ from safedelete.models import SOFT_DELETE
 
 class Good(SafeDeleteModel):
 
-    name = models.CharField(max_length=50)
-    image = models.CharField(max_length=500, null=True)
+    name = models.TextField()
+    image = models.TextField(null=True)
     price = models.DecimalField(decimal_places=2, max_digits=10)
-    description = models.CharField(max_length=100)
+    description = models.TextField()
     quantity = models.IntegerField()
     good_type = models.ForeignKey(GoodType, on_delete=models.DO_NOTHING, related_name="good")
     merchant = models.ForeignKey(Merchant, on_delete=models.DO_NOTHING, related_name="goods")

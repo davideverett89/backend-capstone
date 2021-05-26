@@ -2,7 +2,7 @@ from django.db import models
 
 class UnitSize(models.Model):
 
-    name = models.CharField(max_length=50)
+    name = models.TextField()
 
     class Meta:
         verbose_name = ("unitSize")

@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 
 class Consumer(models.Model):
 
-    bio = models.CharField(max_length=300, default="")
-    profile_image = models.CharField(max_length=500, default="")
-    phone_number = models.CharField(max_length=50)
+    bio = models.TextField(default="")
+    profile_image = models.TextField(default="")
+    phone_number = models.TextField()
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     
     class Meta:

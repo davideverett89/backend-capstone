@@ -2,9 +2,9 @@ from django.db import models
 
 class Market(models.Model):
 
-    name = models.CharField(max_length=50)
-    image = models.CharField(max_length=500, default="")
-    description = models.CharField(max_length=500, default="")
+    name = models.TextField()
+    image = models.TextField(default="")
+    description = models.TextField(default="")
     zip_code = models.IntegerField()
 
     class Meta:
