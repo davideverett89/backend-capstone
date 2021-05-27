@@ -41,7 +41,7 @@ print('KEEEYYYY', os.environ['SECRET_KEY'])
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://safe-stream-57553.herokuapp.com/',
+    'https://lit-oasis-16607.herokuapp.com/',
     '127.0.0.1'
 ]
 
