@@ -111,8 +111,8 @@ WSGI_APPLICATION = 'virtumarketapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['NAME'],
-        'PASSWORD': os.environ['PASSWORD'],
+        'NAME': os.environ.get('NAME'),
+        'PASSWORD': os.environ.get('PASSWORD'),
     }
 }
 
