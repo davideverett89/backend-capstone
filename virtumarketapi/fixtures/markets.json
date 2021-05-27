@@ -5,7 +5,7 @@
         "fields": {
             "name": "Nashville Farmers' Market",
             "image": "https://res.cloudinary.com/nashville-software-school/image/upload/v1622080998/ecwo6ogv/images_mevwpn.jpg",
-            "description": "The Nashville Farmers' Market, founded in the early 1800s, is located in the urban core of downtown Nashville adjacent to the Tennessee State Museum and Bicentennial Mall State Park. The year-round Market provides retail space to farmers, artisans, nonprofits and small businesses. Our facility includes two covered open-air sheds, a container farm, a greenhouse micro greens farm, a 24,000 square-foot garden center, a culinary incubation center and an international food hall that includes some two-dozen restaurants and shops.",
+            "description": "",
             "zip_code": 37208
         }
     },
@@ -15,7 +15,7 @@
         "fields": {
             "name": "Hip Donelson Farmers' Market",
             "image": "https://static1.squarespace.com/static/587e33dabf629a799a38dab9/t/587e380c37c5812c8ce87dcb/1484666893077/HDFM_No_Padding.png?format=1500w",
-            "description": "We believe that knowing your food means knowing your farmer. We champion healthy food and healthy communities by providing a place for everyone to support, enjoy and learn about fresh, locally grown food, local music, cuisine and arts.",
+            "description": "",
             "zip_code": 37214
         }
     },
@@ -25,7 +25,7 @@
         "fields": {
             "name": "Richland Park Farmers' Market",
             "image": "https://res.cloudinary.com/nashville-software-school/image/upload/v1622081062/ecwo6ogv/1598031761759_vykpjw.png",
-            "description": "Throughout the year our farmers and artisan food producers bring the very best for you!  Everything at our market is grown or produced within 150 miles, yet most of it is from even closer!  Some of our farms are just ten miles away, and some of the specialty foods are produced just one block away!",
+            "description": "",
             "zip_code": 37209
         }
     },
@@ -35,7 +35,7 @@
         "fields": {
             "name": "Rutherford County Farmers' Market",
             "image": "https://ded8b07dd9e637888fc2-e87978aaae5cf97349d88697fd53e4c9.ssl.cf1.rackcdn.com/2fa466ed-0abc-4995-831a-3bbd41bd48a7.jpg",
-            "description": "The Rutherford county Farmers' Market is a Producer-Only Farmers Market located in the indoor/open air Community Center at the Lane Agri-Park in Murfreesboro. Market vendors hail from over 20 Middle TN counties and sell a wide variety of seasonal fruits and vegetables, meats, eggs, baked and canned goods, flowers, plants and more! ",
+            "description": "",
             "zip_code": 37129
         }
     },
@@ -45,7 +45,7 @@
         "fields": {
             "name": "East Nashville Farmers' Market",
             "image": "https://eastnashvillemarket.com/wp-content/themes/enfm-2014/images/enfm_logo.png",
-            "description": "The East Nashville Farmers Market is where you can find the best in locally grown, organic, fresh food raised within a couple hours drive of Nashville, Tennessee. Our farmers are your neighbors who carefully grow the food you love. The East Nashville Market has everything you’re looking for in locally grown food from grass fed meats to organically raised produce, fresh pastured eggs to artisan hand-crafted cheeses, and springtime starter plants to Halloween pumpkins.",
+            "description": "",
             "zip_code": 37206
         }
     },
@@ -55,7 +55,7 @@
         "fields": {
             "name": "12 South Farmers' Market",
             "image": "https://res.cloudinary.com/nashville-software-school/image/upload/v1622081101/ecwo6ogv/h9lfh4cilehtno0ebljq.png",
-            "description": "Welcome to 12 South Farmers Market! We are a weekly community market, with live music and food trucks, every  Tuesday afternoon, 4:00PM to 7:00PM  from May through October. Established in 2011, we’ve spent nearly a decade calling Nashville’s beautiful Sevier Park, home. Named among the Nashville Scene’s Best of Nashville for the past five consecutive years, our focus is on celebrating the rich food & creative culture of Tennessee.",
+            "description": "",
             "zip_code": 37212
         }
     },
@@ -65,7 +65,7 @@
         "fields": {
             "name": "Franklin Farmers' Market",
             "image": "https://franklinfarmersmarket.com/wp-content/themes/ffm/images/franklin-farmers-market.png",
-            "description": "The Franklin Farmers Market is a true Tennessee farmers market. From produce, fruit and dairy to baked goods and meats, you’ll find delicious fresh food at the Franklin Farmers Market. And because it’s all from local farms, the variety of goods increases and changes each week through the seasons.",
+            "description": "",
             "zip_code": 37064
         }
     },
@@ -75,7 +75,7 @@
         "fields": {
             "name": "Nolensville Farmers' Market",
             "image": "https://bloximages.newyork1.vip.townnews.com/williamsonhomepage.com/content/tncms/assets/v3/editorial/a/58/a58c3e34-a1c2-5071-8cf1-d38f86eeb087/5d92489a23c77.image.jpg?resize=400%2C400",
-            "description": "The Nolensville Farmer's Market is a producer-only market, open on Saturday mornings at the Historic Nolensville School. The NFM Board takes pride in bringing fresh, local food to Nolensville while supporting local farmers and artisans. You will find all kinds of organic or naturally grown produce, several varieties of meat, baked goods, farm fresh eggs, crafts and food trucks!",
+            "description": "",
             "zip_code": 37135
         }
     },
@@ -85,7 +85,7 @@
         "fields": {
             "name": "Brentwood Farmers' Market",
             "image": "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/51492343_2282885878599850_965274031257288704_n.png?_nc_cat=102&_nc_sid=09cbfe&_nc_ohc=P51vlafgol0AX9wARI3&_nc_ht=scontent-ort2-1.xx&oh=ee8105be8a582b92477bb182d07ab3de&oe=5F86740C",
-            "description": "Throughout the year our farmers and artisan food producers bring the very best for you!  Everything at our market is grown or produced within 150 miles, yet most of it is from even closer!  Some of our farms are just ten miles away, and some of the specialty foods are produced just one block away!",
+            "description": "",
             "zip_code": 37027
         }
     },
@@ -95,7 +95,7 @@
         "fields": {
             "name": "Old Hickory Village Farmers' Market",
             "image": "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/55476692_1771053066374194_2751264880546807808_o.png?_nc_cat=109&_nc_sid=09cbfe&_nc_ohc=WM_IJ0BCHKIAX9ysWkb&_nc_ht=scontent-ort2-1.xx&oh=fa4c2f63cfd4b96113889a5bbf489d35&oe=5F8648B6",
-            "description": "Old Hickory Village Farmers Market is a producer only market. We feature the best in local farm produce, meat, eggs, artisan foods, & handmade goods as well as food trucks & live music!",
+            "description": "",
             "zip_code": 37138
         }
     }
