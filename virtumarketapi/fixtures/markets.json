@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "Nashville Farmers' Market",
-            "image": "https://images.squarespace-cdn.com/content/v1/5ade9263620b8564e0cad4ce/1584357029239-2RVPWK2LVLYE50P0SMDL/ke17ZwdGBToddI8pDm48kIJVZC1yRCNmos4_2dchiN17gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fJOMkNWfLvJv8iObZEZ23W95mlsLO3XOiS8CYKr-R4P7A/NFMlogo-color.jpg",
+            "image": "https://res.cloudinary.com/nashville-software-school/image/upload/v1622080998/ecwo6ogv/images_mevwpn.jpg",
             "description": "The Nashville Farmers' Market, founded in the early 1800s, is located in the urban core of downtown Nashville adjacent to the Tennessee State Museum and Bicentennial Mall State Park. The year-round Market provides retail space to farmers, artisans, nonprofits and small businesses. Our facility includes two covered open-air sheds, a container farm, a greenhouse micro greens farm, a 24,000 square-foot garden center, a culinary incubation center and an international food hall that includes some two-dozen restaurants and shops.",
             "zip_code": 37208
         }
@@ -24,7 +24,7 @@
         "pk": 3,
         "fields": {
             "name": "Richland Park Farmers' Market",
-            "image": "https://images.squarespace-cdn.com/content/v1/56aca8be89a60aa6dae0cd50/1525044266873-V3G8ZKF88MEV8IWDFS3I/ke17ZwdGBToddI8pDm48kNicY3HHSXbN7Zem6b8d2vV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmoJKo7K7P-K3iDKcb1IjyB0HHiVoIG_zVz5N9cjm0QmhMNwUDbhIyNLB-f6MXx3Ii/IMG_4995.JPG",
+            "image": "https://res.cloudinary.com/nashville-software-school/image/upload/v1622081062/ecwo6ogv/1598031761759_vykpjw.png",
             "description": "Throughout the year our farmers and artisan food producers bring the very best for you!  Everything at our market is grown or produced within 150 miles, yet most of it is from even closer!  Some of our farms are just ten miles away, and some of the specialty foods are produced just one block away!",
             "zip_code": 37209
         }
@@ -54,7 +54,7 @@
         "pk": 6,
         "fields": {
             "name": "12 South Farmers' Market",
-            "image": "https://images.squarespace-cdn.com/content/v1/5c0696b770e80270c28bb178/1585076260924-3TJI8BL8SNLLNDW862YL/ke17ZwdGBToddI8pDm48kMFiMyT1nneRMhnmfuSfpxZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k8MW1YpTavFM7X5bAIj_ZFRi3EPRLL0haQvuMjsRqCqzvYDj1F6UE4DOgvXHZfTbA/White+Minimalist+Coffee+Quote+Photo+Collage+%281%29.png?format=2500w",
+            "image": "https://res.cloudinary.com/nashville-software-school/image/upload/v1622081101/ecwo6ogv/h9lfh4cilehtno0ebljq.png",
             "description": "Welcome to 12 South Farmers Market! We are a weekly community market, with live music and food trucks, every  Tuesday afternoon, 4:00PM to 7:00PM  from May through October. Established in 2011, we’ve spent nearly a decade calling Nashville’s beautiful Sevier Park, home. Named among the Nashville Scene’s Best of Nashville for the past five consecutive years, our focus is on celebrating the rich food & creative culture of Tennessee.",
             "zip_code": 37212
         }
