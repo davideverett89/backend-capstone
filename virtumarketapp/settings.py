@@ -22,11 +22,6 @@ if  os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
 
-# import environ
-# Initialise environment variables
-# env = environ.Env()
-# environ.Env.read_env()
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 
@@ -36,7 +31,7 @@ if  os.path.isfile(dotenv_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = os.environ['SECRET_KEY']
-print('KEEEYYYY', os.environ['SECRET_KEY'])
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
