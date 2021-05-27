@@ -32,7 +32,7 @@ VirtuMarket is a full stack project split into two repositories: one that contai
 ## How To Run
 1. Clone down this repo into a local directory of your choosing and `cd` into it.
 2. Set up your virtual environment:
-    `python -m venv VirtuMarketEv`
+    `python -m venv VirtuMarketEnv`
 3. Activate the virtual environment:
     `source ./VirtuMarketEnv/bin/activate`
 4. Install dependencies:
