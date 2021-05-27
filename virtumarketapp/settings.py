@@ -12,10 +12,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-import environ
+
+# import environ
 # Initialise environment variables
-env = environ.Env()
-environ.Env.read_env()
+# env = environ.Env()
+# environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -106,11 +107,11 @@ WSGI_APPLICATION = 'virtumarketapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DATABASE_NAME'),
-        'HOST': env('HOST'),
+        'NAME': os.environ.get('DATABASE_NAME'),
+        'HOST': os.environ.get('HOST'),
         'PORT': 5432,
-        'USER': env('USER'),
-        'PASSWORD': env('PASSWORD')
+        'USER': os.environ.get('USER'),
+        'PASSWORD': os.environ.get('PASSWORD')
     }
 }
 
@@ -154,5 +155,5 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 
-import django_on_heroku
+import django_heroku
 django_on_heroku.settings(locals())
