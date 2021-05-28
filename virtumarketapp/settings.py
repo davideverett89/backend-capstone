@@ -81,7 +81,8 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
-    'http://127.0.0.1:3000'
+    'http://127.0.0.1:3000',
+    'https://virtumarket-f8920.web.app'
 )
 
 ROOT_URLCONF = 'virtumarketapp.urls'
